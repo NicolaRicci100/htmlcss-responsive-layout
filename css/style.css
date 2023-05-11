@@ -43,6 +43,7 @@ header{
     background-color: rgb(0,132,253);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 header div{
     height: 100%;
@@ -99,11 +100,13 @@ main section{
 .jumbotron h3{
     color:  rgb(0,132,253);
     padding-top: 5px;
+    font-size: 23px;
 }
 .jumbotron p{
     color:  rgb(90,109,126);
     line-height: 30px;
     font-weight: 700;
+    font-size: 18px;
     margin: 30px 0;
 }
 .jumbotron a{
