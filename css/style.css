@@ -16,6 +16,9 @@ body{
 .flex{
     display: flex;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 
 /* TODO classe debug */
 .debug{ 
@@ -39,6 +42,32 @@ header div{
     display: none;
 }
 
+/* impostazioni di main */
+main, section{
+    margin-top: 30px;
+}
+.jumbotron{                     /** sezione 1 */
+    width: 100%;
+    height: 500px; /* TODO temporaneo */
+}
+.jumbotron div{
+    flex-basis:calc(100% / 3);
+    background-color: rgb(181,221,255);
+}
+.jumbotron div:first-child{
+    flex-basis: calc(100% / 1.5);
+}
+.violet{                        /** sezione 2 */
+    background-color: rgb(151,146,227);
+    height: 500px; /* TODO temporaneo */
+}
+.planning{
+    width: 100%;
+    height: 500px;
+}
+.planning div{
+    flex-basis: 50%;
+}
 
 
 
@@ -48,15 +77,31 @@ header div{
 
 /** breakpoint di riferimento 480px, 576px, 768px, 992px, 1200px **/
 
-/* screen 768px */
-@media screen and (max-width: 810px){
+/* screen 992px */
+@media screen and (max-width: 992px){
     .container{
-        max-width: 768px;
+        max-width: 810px;
     }
     .nav-bar{
         display: none;
     }
     .menu{
         display: block;
+    }
+    .planning div{
+        flex-basis: 100%;
+    }
+}
+
+/* screen 480px */
+@media screen and (max-width: 480px){
+    .container{
+        max-width: 375px;
+    }
+    .jumbotron div{
+        flex-basis: 100%;
+    }
+    .jumbotron div:first-child{
+        flex-basis: 100%;
     }
 }
