@@ -22,6 +22,10 @@ body{
 .center{
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 
 
@@ -40,15 +44,28 @@ header{
     position: sticky;
     top: 0;
 }
-
 header div{
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 .menu{
     display: none;
+    color: white;
 }
+.nav-bar{
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+.nav-bar a:last-child{
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 8px;
+}
+
 
 /* impostazioni di main */
 main section{
@@ -56,14 +73,53 @@ main section{
 }
 .jumbotron{                     /** sezione 1 */
     width: 100%;
+    height: auto;
+    justify-content: center;
 }
-.jumbotron div{
+.jumbotron > div{
     flex-basis:calc(100% / 3);
     background-color: rgb(181,221,255);
+    padding: 15px;
+    border-radius: 25px;
+    border: 10px solid white;
 }
-.jumbotron div:first-child{
+.jumbotron > div:first-child{
     flex-basis: calc(100% / 1.5);
 }
+.phone div{
+    flex-basis: 50%;
+    justify-content: center;
+}
+.phone div img{
+    width: 60%;
+    height: auto;
+    padding-top: 20px;
+    translate: 0 15px;
+}
+.jumbotron h3{
+    color:  rgb(0,132,253);
+    padding-top: 5px;
+}
+.jumbotron p{
+    color:  rgb(90,109,126);
+    line-height: 30px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+.jumbotron a{
+    background-color: rgb(0,132,253);
+    border-radius: 25px;
+    padding: 8px 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.big-icon{
+    font-size: 60px;
+    color: rgb(0,132,253);
+    padding: 10px;
+}
+
+
 .violet{                        /** sezione 2 */
     background-color: rgb(151,146,227);
 }
@@ -120,6 +176,10 @@ main section{
     .about-us div:last-child{
         flex-basis: 40%;
     }
+    .phone div{
+        flex-basis: 100%;
+        justify-content: center;
+    }
 }
 
 /* screen 480px */
@@ -142,5 +202,9 @@ main section{
     }
     .about-us div:last-child{
         flex-basis: 30%;
+    }
+    .phone div{
+        flex-basis: 100%;
+        justify-content: center;
     }
 }
