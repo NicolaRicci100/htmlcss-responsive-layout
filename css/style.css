@@ -19,10 +19,18 @@ body{
 .wrap{
     flex-wrap: wrap;
 }
+.center{
+    text-align: center;
+}
+
+
 
 /* TODO classe debug */
 .debug{ 
     border: 2px dashed black;
+}
+.fiat{
+    height: 500px;
 }
 
 /* impostazioni di header */
@@ -48,7 +56,6 @@ main, section{
 }
 .jumbotron{                     /** sezione 1 */
     width: 100%;
-    height: 500px; /* TODO temporaneo */
 }
 .jumbotron div{
     flex-basis:calc(100% / 3);
@@ -59,15 +66,21 @@ main, section{
 }
 .violet{                        /** sezione 2 */
     background-color: rgb(151,146,227);
-    height: 500px; /* TODO temporaneo */
 }
 .planning{
     width: 100%;
-    height: 500px;
 }
 .planning div{
     flex-basis: 50%;
 }
+.testimonials div{              /** sezione 3 */
+    background-color: rgb(151,146,227);
+    flex-basis: 100%;
+}
+.benefits div{                  /** sezione 4 */
+    flex-basis: calc(100% / 3);
+}
+
 
 
 
@@ -91,6 +104,9 @@ main, section{
     .planning div{
         flex-basis: 100%;
     }
+    .benefits div{                  
+        flex-basis: calc(100% / 2);
+    }
 }
 
 /* screen 480px */
@@ -98,10 +114,11 @@ main, section{
     .container{
         max-width: 375px;
     }
-    .jumbotron div{
-        flex-basis: 100%;
+    .jumbotron{
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
-    .jumbotron div:first-child{
+    .benefits div{                  
         flex-basis: 100%;
     }
 }
